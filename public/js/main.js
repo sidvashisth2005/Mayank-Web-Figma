@@ -185,28 +185,33 @@
     });
   }
 
-  // ----- Page transitions: a green shutter between internal pages -----
+  // ----- Page transitions: a dark panel rises with the destination's name,
+  // then lifts off the next page. -----
   const shutter = $("#shutter");
+  const shutterLabel = $("#shutterLabel");
+  const labels = { "/": "Home", "/market": "Market", "/sell": "List an asset", "/how-it-works": "How it works", "/restricted-assets": "Listing rules", "/terms": "Terms", "/privacy": "Privacy" };
+  const labelFor = (url, link) => labels[url.pathname] || (url.pathname.startsWith("/market/") ? (link && link.querySelector("h3") ? link.querySelector("h3").textContent : "Record") : "Mayank");
   if (shutter && !reduce) {
-    try {
-      if (sessionStorage.getItem("mayank-shutter")) {
-        sessionStorage.removeItem("mayank-shutter");
-        shutter.classList.add("is-covering");
-        requestAnimationFrame(() => requestAnimationFrame(() => shutter.classList.replace("is-covering", "is-leaving")));
-        shutter.addEventListener("transitionend", () => shutter.classList.remove("is-leaving"), { once: true });
-      }
-    } catch (e) {}
+    let incoming = null;
+    try { incoming = sessionStorage.getItem("mayank-shutter"); sessionStorage.removeItem("mayank-shutter"); } catch (e) {}
+    if (incoming) {
+      shutterLabel.textContent = incoming;
+      shutter.classList.add("is-covering");
+      requestAnimationFrame(() => requestAnimationFrame(() => shutter.classList.replace("is-covering", "is-leaving")));
+      shutter.addEventListener("transitionend", () => { shutter.className = "shutter"; }, { once: true });
+    }
     document.addEventListener("click", (e) => {
       const a = e.target.closest("a[href]");
       if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target === "_blank" || a.hasAttribute("download")) return;
       const url = new URL(a.href, location.href);
-      if (url.origin !== location.origin || (url.pathname === location.pathname && url.search === location.search)) return;
+      if (url.origin !== location.origin || url.pathname.startsWith("/api/") || (url.pathname === location.pathname && url.search === location.search)) return;
       e.preventDefault();
-      try { sessionStorage.setItem("mayank-shutter", "1"); } catch (err) {}
-      shutter.classList.add("is-entering");
-      setTimeout(() => { location.href = url.href; }, 420);
+      const label = labelFor(url, a);
+      shutterLabel.textContent = label;
+      try { sessionStorage.setItem("mayank-shutter", label); } catch (err) {}
+      shutter.className = "shutter is-entering";
+      setTimeout(() => { location.href = url.href; }, 480);
     });
-    // Restore when returning through the back/forward cache
     addEventListener("pageshow", (e) => { if (e.persisted) shutter.className = "shutter"; });
   }
 
@@ -218,6 +223,7 @@
   toggle.addEventListener("click", () => {
     const open = nav.classList.toggle("open");
     toggle.setAttribute("aria-expanded", String(open));
+    root.classList.toggle("menu-open", open);
   });
 
   // ----- Scroll-driven effects -----
