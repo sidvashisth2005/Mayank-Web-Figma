@@ -30,10 +30,10 @@
         var nav = performance.getEntriesByType("navigation")[0];
         skip = !!sessionStorage.getItem("mayank-shutter") || (nav && nav.type === "back_forward") || matchMedia("(prefers-reduced-motion: reduce)").matches;
       } catch (e) { skip = true; }
-      if (skip) { d.classList.add("no-intro"); return; }
+      if (skip) { d.classList.add("no-intro"); try { if (sessionStorage.getItem("mayank-shutter")) d.classList.add("is-arriving"); } catch (e) {} return; }
       if ("scrollRestoration" in history) history.scrollRestoration = "manual";
       if (location.hash) history.replaceState(null, "", location.pathname + location.search);
-      scrollTo(0, 0);
+      scrollTo({ top: 0, left: 0, behavior: "instant" });
     })();
   </script>
 </head>
@@ -70,6 +70,7 @@
   </div>
 
   <div class="shutter" id="shutter" aria-hidden="true"><div class="shutter__inner"><span class="shutter__dot"></span><span class="shutter__label" id="shutterLabel"></span></div></div>
+  <script>try{var l=sessionStorage.getItem("mayank-shutter");if(l)document.getElementById("shutterLabel").textContent=l}catch(e){}</script>
   <div class="progress" id="progress" aria-hidden="true"></div>
 
   <header class="header" id="header">

@@ -77,7 +77,7 @@
   }
 
   function runIntro() {
-    scrollTo(0, 0);
+    scrollTo({ top: 0, left: 0, behavior: "instant" });
     root.classList.add("is-loading");
     const byId = (id) => document.getElementById(id);
     const card = byId("ldCard"), stamp = byId("ldStamp"), stage = byId("ldStage"), meter = byId("ldMeter");
@@ -172,9 +172,9 @@
       const sweep = wipe.animate([{ transform: "translateY(101%)" }, { transform: "translateY(0)" }], { duration: 520 * d, delay: fast ? 0 : 260, easing: IN_OUT, fill: "forwards" });
       sweep.finished.then(() => {
         running.forEach((a) => a.cancel());
-        ready();
         root.classList.remove("is-loading");
-        const lift = loader.animate([{ clipPath: "inset(0 0 0 0)" }, { clipPath: "inset(0 0 100% 0)" }], { duration: 750 * d, easing: IN_OUT, fill: "forwards" });
+        const lift = loader.animate([{ transform: "translate3d(0,0,0)" }, { transform: "translate3d(0,-100%,0)" }], { duration: 800 * d, easing: IN_OUT, fill: "forwards" });
+        setTimeout(ready, 120 * d);
         lift.finished.then(() => loader.remove());
       });
     }
@@ -191,28 +191,40 @@
   const shutterLabel = $("#shutterLabel");
   const labels = { "/": "Home", "/market": "Market", "/sell": "List an asset", "/how-it-works": "How it works", "/restricted-assets": "Listing rules", "/terms": "Terms", "/privacy": "Privacy" };
   const labelFor = (url, link) => labels[url.pathname] || (url.pathname.startsWith("/market/") ? (link && link.querySelector("h3") ? link.querySelector("h3").textContent : "Record") : "Mayank");
-  if (shutter && !reduce) {
-    let incoming = null;
-    try { incoming = sessionStorage.getItem("mayank-shutter"); sessionStorage.removeItem("mayank-shutter"); } catch (e) {}
-    if (incoming) {
-      shutterLabel.textContent = incoming;
-      shutter.classList.add("is-covering");
-      requestAnimationFrame(() => requestAnimationFrame(() => shutter.classList.replace("is-covering", "is-leaving")));
-      shutter.addEventListener("transitionend", () => { shutter.className = "shutter"; }, { once: true });
+  if (shutter) {
+    const once = (el, fn, fallback) => {
+      let done = false;
+      const run = () => { if (!done) { done = true; fn(); } };
+      el.addEventListener("transitionend", (e) => { if (e.target === el && e.propertyName === "transform") run(); }, { once: false });
+      setTimeout(run, fallback);
+    };
+    // Arriving: the panel already covers the page (set before first paint).
+    if (root.classList.contains("is-arriving")) {
+      try { sessionStorage.removeItem("mayank-shutter"); } catch (e) {}
+      const fonts = document.fonts ? document.fonts.ready : Promise.resolve();
+      Promise.race([fonts, new Promise((r) => setTimeout(r, 500))]).then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
+        shutter.classList.add("is-leaving");
+        root.classList.remove("is-arriving");
+        once(shutter, () => { shutter.className = "shutter"; }, 1000);
+      })));
     }
-    document.addEventListener("click", (e) => {
-      const a = e.target.closest("a[href]");
-      if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target === "_blank" || a.hasAttribute("download")) return;
-      const url = new URL(a.href, location.href);
-      if (url.origin !== location.origin || url.pathname.startsWith("/api/") || (url.pathname === location.pathname && url.search === location.search)) return;
-      e.preventDefault();
-      const label = labelFor(url, a);
-      shutterLabel.textContent = label;
-      try { sessionStorage.setItem("mayank-shutter", label); } catch (err) {}
-      shutter.className = "shutter is-entering";
-      setTimeout(() => { location.href = url.href; }, 480);
-    });
-    addEventListener("pageshow", (e) => { if (e.persisted) shutter.className = "shutter"; });
+    if (!reduce) {
+      document.addEventListener("click", (e) => {
+        const a = e.target.closest("a[href]");
+        if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target === "_blank" || a.hasAttribute("download")) return;
+        const url = new URL(a.href, location.href);
+        if (url.origin !== location.origin || url.pathname.startsWith("/api/") || (url.pathname === location.pathname && url.search === location.search)) return;
+        e.preventDefault();
+        const label = labelFor(url, a);
+        shutterLabel.textContent = label;
+        try { sessionStorage.setItem("mayank-shutter", label); } catch (err) {}
+        shutter.className = "shutter";
+        void shutter.offsetWidth; // start from the resting position
+        shutter.classList.add("is-entering");
+        once(shutter, () => { location.href = url.href; }, 800);
+      });
+    }
+    addEventListener("pageshow", (e) => { if (e.persisted) { shutter.className = "shutter"; root.classList.remove("is-arriving"); } });
   }
 
   // ----- Header, mobile menu, progress -----
