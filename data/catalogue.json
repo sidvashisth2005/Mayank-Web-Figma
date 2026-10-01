@@ -1,0 +1,1208 @@
+{
+ "categories": [
+  {
+   "key": "product",
+   "ink": "#9C3D2A",
+   "label": "Complete product",
+   "plural": "Complete products",
+   "note": "Working software with source, deployment notes and a founder handover."
+  },
+  {
+   "key": "code",
+   "ink": "#3E5566",
+   "label": "Code & technical",
+   "plural": "Code & technical assets",
+   "note": "Repositories, APIs, SDKs and internal tools with documented history."
+  },
+  {
+   "key": "domain",
+   "ink": "#8E6718",
+   "label": "Domain & identity",
+   "plural": "Domains & identity",
+   "note": "Names with registrar proof, plus the identity work built around them."
+  },
+  {
+   "key": "design",
+   "ink": "#5D6B3C",
+   "label": "Design system",
+   "plural": "Design systems",
+   "note": "Component libraries, tokens and interface kits with licence terms."
+  },
+  {
+   "key": "template",
+   "ink": "#4B3A4F",
+   "label": "Template",
+   "plural": "Templates",
+   "note": "Site, product and content templates sold outright or licensed."
+  },
+  {
+   "key": "provider",
+   "ink": "#2F3130",
+   "label": "Provider-eligible",
+   "plural": "Provider-eligible assets",
+   "note": "App listings, pages or capacity, only where the provider permits a documented transfer."
+  }
+ ],
+ "records": [
+  {
+   "id": "MX-024",
+   "slug": "kite",
+   "name": "Kite",
+   "type": "Analytics product",
+   "category": "product",
+   "deal": "sell",
+   "status": "live",
+   "price": 185000,
+   "ageMonths": 18,
+   "listed": "2026-09-21",
+   "summary": "A focused analytics workspace for subscription teams.",
+   "description": "A focused analytics workspace for subscription teams, including the interface system, production code and operating notes.",
+   "review": "Evidence reviewed",
+   "access": "Private demo after accepted enquiry",
+   "route": "Repository, deployment and 21-day handover",
+   "transferWindow": "21 days",
+   "includes": [
+    "Production repository",
+    "Deployment notes",
+    "Interface system",
+    "Founder handover"
+   ],
+   "works": [
+    "Cohort, revenue and churn dashboards",
+    "Stripe billing import",
+    "Team workspaces and roles"
+   ],
+   "depends": [
+    "Hosting is excluded and must be replaced by the buyer",
+    "Stripe account is re-connected by the new owner"
+   ],
+   "excluded": [
+    "Customer accounts and their data",
+    "The original company name"
+   ],
+   "metric": {
+    "value": "1,284",
+    "label": "active accounts"
+   }
+  },
+  {
+   "id": "MX-031",
+   "slug": "northstar",
+   "name": "Northstar",
+   "type": "Domain and identity",
+   "category": "domain",
+   "deal": "sell",
+   "status": "live",
+   "price": 78000,
+   "ageMonths": 36,
+   "listed": "2026-09-18",
+   "summary": "A concise dot-com with a complete naming system.",
+   "description": "A concise dot-com name with a complete naming system, launch language and editable master identity files.",
+   "review": "Route documented",
+   "access": "Registrar proof after accepted enquiry",
+   "route": "Registrar transfer and editable identity archive",
+   "transferWindow": "5–7 days",
+   "includes": [
+    "Dot-com domain",
+    "Identity masters",
+    "Naming guidelines",
+    "Launch copy deck"
+   ],
+   "works": [
+    "Domain renewed through next year",
+    "Editable logo and type masters",
+    "Clean registrar history"
+   ],
+   "depends": [
+    "Registrar eligibility and transfer lock are confirmed before completion"
+   ],
+   "excluded": [
+    "Social handles with the same name",
+    "Trademark registration"
+   ],
+   "metric": {
+    "value": "14",
+    "label": "original files"
+   }
+  },
+  {
+   "id": "MX-038",
+   "slug": "relay",
+   "name": "Relay",
+   "type": "Design system",
+   "category": "design",
+   "deal": "rent",
+   "status": "live",
+   "price": 42000,
+   "priceUnit": "year",
+   "ageMonths": 11,
+   "listed": "2026-09-16",
+   "summary": "A production-tested interface library, licensed exclusively.",
+   "description": "A production-tested interface library with design tokens, accessibility notes and implementation guidance, offered as an exclusive yearly licence.",
+   "review": "Evidence ready",
+   "access": "Read-only library review",
+   "route": "Exclusive licence with source library",
+   "transferWindow": "10 days",
+   "includes": [
+    "126 components",
+    "Design tokens",
+    "Implementation notes",
+    "Accessibility audit"
+   ],
+   "works": [
+    "Light and dark token sets",
+    "React implementation for 84 components",
+    "Documented focus states"
+   ],
+   "depends": [
+    "Fonts and third-party icon licences are documented separately"
+   ],
+   "excluded": [
+    "Ownership of the library, as this is a licence",
+    "Future component updates"
+   ],
+   "metric": {
+    "value": "126",
+    "label": "production components"
+   }
+  },
+  {
+   "id": "MX-043",
+   "slug": "atlas",
+   "name": "Atlas",
+   "type": "Support portal",
+   "category": "product",
+   "deal": "sell",
+   "status": "live",
+   "price": 240000,
+   "ageMonths": 22,
+   "listed": "2026-09-12",
+   "summary": "A searchable support portal with a publishing workflow.",
+   "description": "A searchable support portal with publishing workflow, deployment documentation and a clean operator handover.",
+   "review": "Evidence reviewed",
+   "access": "Guided product walkthrough",
+   "route": "Native transfer with 30-day founder support",
+   "transferWindow": "30 days",
+   "includes": [
+    "Application source",
+    "Publishing workflow",
+    "Operator handbook",
+    "30-day founder support"
+   ],
+   "works": [
+    "Full-text help search",
+    "Draft, review and publish states",
+    "Multi-language articles"
+   ],
+   "depends": [
+    "Search infrastructure requires a new billing owner at transfer"
+   ],
+   "excluded": [
+    "Existing customer help content",
+    "Support inbox history"
+   ],
+   "metric": {
+    "value": "2.7m",
+    "label": "indexed help words"
+   }
+  },
+  {
+   "id": "MX-047",
+   "slug": "ledgerline",
+   "name": "Ledgerline",
+   "type": "Invoicing API and SDK",
+   "category": "code",
+   "deal": "sell",
+   "status": "live",
+   "price": 96000,
+   "ageMonths": 14,
+   "listed": "2026-09-24",
+   "summary": "A GST-ready invoicing API with TypeScript and Python SDKs.",
+   "description": "A GST-ready invoicing API with TypeScript and Python SDKs, test suite and a documented migration path off the original infrastructure.",
+   "review": "Evidence reviewed",
+   "access": "Read-only repository review",
+   "route": "Repository transfer and SDK package ownership",
+   "transferWindow": "14 days",
+   "includes": [
+    "API source",
+    "TypeScript SDK",
+    "Python SDK",
+    "Test suite and fixtures"
+   ],
+   "works": [
+    "Invoice, credit note and tax-summary endpoints",
+    "PDF rendering",
+    "Webhook delivery with retries"
+   ],
+   "depends": [
+    "Package registry ownership moves separately for each SDK"
+   ],
+   "excluded": [
+    "Production database",
+    "API keys issued to former users"
+   ],
+   "metric": {
+    "value": "412",
+    "label": "passing tests"
+   }
+  },
+  {
+   "id": "MX-051",
+   "slug": "paperplane",
+   "name": "Paperplane",
+   "type": "Launch site template kit",
+   "category": "template",
+   "deal": "rent",
+   "status": "live",
+   "price": 18000,
+   "priceUnit": "year",
+   "ageMonths": 9,
+   "listed": "2026-09-26",
+   "summary": "Nine launch-page templates, licensed per company.",
+   "description": "Nine launch and pricing page templates with editable copy structure and responsive layouts, licensed per company, per year.",
+   "review": "Evidence ready",
+   "access": "Live preview of all nine pages",
+   "route": "Non-exclusive yearly licence",
+   "transferWindow": "2 days",
+   "includes": [
+    "9 page templates",
+    "Section library",
+    "Copy structure guide"
+   ],
+   "works": [
+    "Responsive from 360px to wide desktop",
+    "Editable section order",
+    "Accessible form patterns"
+   ],
+   "depends": [
+    "Stock imagery is not included and must be replaced"
+   ],
+   "excluded": [
+    "Exclusive rights",
+    "Custom design work"
+   ],
+   "metric": {
+    "value": "9",
+    "label": "page templates"
+   }
+  },
+  {
+   "id": "MX-054",
+   "slug": "tessellate",
+   "name": "Tessellate",
+   "type": "Data-visualisation kit",
+   "category": "design",
+   "deal": "sell",
+   "status": "sold",
+   "price": 64000,
+   "ageMonths": 16,
+   "listed": "2026-08-30",
+   "summary": "Chart components and guidance for dense product dashboards.",
+   "description": "Chart components, colour guidance and layout rules for dense product dashboards. This record is closed and shown for reference.",
+   "review": "Transfer completed",
+   "access": "Closed record",
+   "route": "Full assignment of design and code",
+   "transferWindow": "12 days",
+   "includes": [
+    "38 chart components",
+    "Colour guidance",
+    "Dashboard layouts"
+   ],
+   "works": [
+    "Line, bar, area and table components",
+    "Colour-blind safe palettes"
+   ],
+   "depends": [
+    "None recorded"
+   ],
+   "excluded": [
+    "Brand assets of the original company"
+   ],
+   "metric": {
+    "value": "38",
+    "label": "chart components"
+   }
+  },
+  {
+   "id": "MX-058",
+   "slug": "tidewater",
+   "name": "Tidewater",
+   "type": "iOS habit app",
+   "category": "provider",
+   "deal": "sell",
+   "status": "live",
+   "price": 120000,
+   "ageMonths": 20,
+   "listed": "2026-09-22",
+   "summary": "An App Store habit tracker moved through Apple's app transfer.",
+   "description": "A published iOS habit tracker with source code, moved through the App Store's own app-transfer process so ratings and the listing stay intact.",
+   "review": "Route documented",
+   "access": "TestFlight build after accepted enquiry",
+   "route": "App Store app transfer and repository",
+   "transferWindow": "10–14 days",
+   "includes": [
+    "Swift source",
+    "App Store listing via app transfer",
+    "Design files",
+    "Release notes"
+   ],
+   "works": [
+    "Current iOS version supported",
+    "Widgets and reminders",
+    "Local-first storage"
+   ],
+   "depends": [
+    "Apple's app-transfer eligibility must be confirmed for both accounts"
+   ],
+   "excluded": [
+    "User data",
+    "The seller's developer account itself"
+   ],
+   "metric": {
+    "value": "4.6",
+    "label": "App Store rating"
+   }
+  },
+  {
+   "id": "MX-062",
+   "slug": "fernway",
+   "name": "Fernway",
+   "type": "Domain and identity",
+   "category": "domain",
+   "deal": "sell",
+   "status": "live",
+   "price": 54000,
+   "ageMonths": 48,
+   "listed": "2026-09-08",
+   "summary": "A two-syllable brandable name with a travel identity.",
+   "description": "A two-syllable brandable dot-com with an unused travel identity: wordmark, colour notes and a short naming rationale.",
+   "review": "Route documented",
+   "access": "Registrar proof after accepted enquiry",
+   "route": "Registrar transfer and identity files",
+   "transferWindow": "5–7 days",
+   "includes": [
+    "Dot-com domain",
+    "Wordmark masters",
+    "Naming rationale"
+   ],
+   "works": [
+    "Domain renewed through next year",
+    "Clean ownership history"
+   ],
+   "depends": [
+    "Registrar transfer lock is lifted before completion"
+   ],
+   "excluded": [
+    "Any website content",
+    "Trademark registration"
+   ],
+   "metric": {
+    "value": "4 yrs",
+    "label": "continuous ownership"
+   }
+  },
+  {
+   "id": "MX-066",
+   "slug": "stackyard",
+   "name": "Stackyard",
+   "type": "Internal admin codebase",
+   "category": "code",
+   "deal": "rent",
+   "status": "rented",
+   "price": 9000,
+   "priceUnit": "month",
+   "ageMonths": 26,
+   "listed": "2026-08-19",
+   "summary": "An admin dashboard codebase, currently licensed to another team.",
+   "description": "An internal admin dashboard codebase with roles, audit logs and table tooling. It is currently licensed and shown for reference.",
+   "review": "Licence active",
+   "access": "Closed record",
+   "route": "Monthly source licence",
+   "transferWindow": "3 days",
+   "includes": [
+    "Admin source",
+    "Role and audit modules",
+    "Setup guide"
+   ],
+   "works": [
+    "Role-based access",
+    "Audit log",
+    "CSV import and export"
+   ],
+   "depends": [
+    "Requires a Postgres database provided by the licensee"
+   ],
+   "excluded": [
+    "Hosting",
+    "Support beyond setup"
+   ],
+   "metric": {
+    "value": "31",
+    "label": "admin modules"
+   }
+  },
+  {
+   "id": "MX-070",
+   "slug": "quorum",
+   "name": "Quorum",
+   "type": "Meeting scheduling SaaS",
+   "category": "product",
+   "deal": "sell",
+   "status": "live",
+   "price": 210000,
+   "ageMonths": 27,
+   "listed": "2026-09-27",
+   "summary": "Round-robin scheduling for sales teams, with calendar sync.",
+   "description": "A scheduling product for B2B sales teams: round-robin routing, Google and Outlook calendar sync, and booking pages with qualification questions.",
+   "review": "Evidence reviewed",
+   "access": "Private demo after accepted enquiry",
+   "route": "Repository, deployment and 30-day handover",
+   "transferWindow": "30 days",
+   "includes": [
+    "Application source",
+    "Booking page builder",
+    "Calendar sync service",
+    "Founder handover"
+   ],
+   "works": [
+    "Google and Outlook two-way sync",
+    "Round-robin and weighted routing",
+    "Booking pages with custom questions"
+   ],
+   "depends": [
+    "Google and Microsoft OAuth apps must be re-registered by the buyer"
+   ],
+   "excluded": [
+    "Existing customer workspaces",
+    "Company name and domain"
+   ],
+   "metric": {
+    "value": "2,940",
+    "label": "meetings booked last month"
+   }
+  },
+  {
+   "id": "MX-073",
+   "slug": "parcelboard",
+   "name": "Parcelboard",
+   "type": "Logistics tracking dashboard",
+   "category": "product",
+   "deal": "sell",
+   "status": "live",
+   "price": 165000,
+   "ageMonths": 19,
+   "listed": "2026-08-22",
+   "summary": "Shipment tracking across eight Indian carriers in one view.",
+   "description": "A tracking dashboard for D2C brands that pulls shipment status from eight Indian carriers, flags delays and sends branded delivery updates.",
+   "review": "Evidence reviewed",
+   "access": "Guided product walkthrough",
+   "route": "Repository transfer and carrier-integration notes",
+   "transferWindow": "21 days",
+   "includes": [
+    "Application source",
+    "Eight carrier connectors",
+    "Notification templates",
+    "Operator notes"
+   ],
+   "works": [
+    "Delay detection and alerts",
+    "Branded tracking pages",
+    "WhatsApp and email updates"
+   ],
+   "depends": [
+    "Carrier API keys are issued to the buyer's own company"
+   ],
+   "excluded": [
+    "Shipment history of current customers"
+   ],
+   "metric": {
+    "value": "8",
+    "label": "carrier integrations"
+   }
+  },
+  {
+   "id": "MX-076",
+   "slug": "tally-desk",
+   "name": "Tally Desk",
+   "type": "Bookkeeping for freelancers",
+   "category": "product",
+   "deal": "rent",
+   "status": "live",
+   "price": 14000,
+   "priceUnit": "month",
+   "ageMonths": 15,
+   "listed": "2026-07-30",
+   "summary": "Invoices, expenses and GST summaries for independent professionals.",
+   "description": "A bookkeeping product for freelancers: invoices, expense capture, GST summaries and a quarterly tax estimate. Offered as a white-label licence.",
+   "review": "Evidence ready",
+   "access": "Sandbox account after accepted enquiry",
+   "route": "White-label source licence, monthly",
+   "transferWindow": "7 days",
+   "includes": [
+    "White-label source",
+    "Deployment guide",
+    "Tax-rule tables"
+   ],
+   "works": [
+    "GST invoice numbering",
+    "Receipt capture by photo",
+    "Quarterly advance-tax estimate"
+   ],
+   "depends": [
+    "Tax tables must be kept current by the licensee"
+   ],
+   "excluded": [
+    "Ownership of the codebase",
+    "Existing user accounts"
+   ],
+   "metric": {
+    "value": "640",
+    "label": "active freelancers"
+   }
+  },
+  {
+   "id": "MX-079",
+   "slug": "signalkit",
+   "name": "Signalkit",
+   "type": "Feature-flag SDK",
+   "category": "code",
+   "deal": "sell",
+   "status": "live",
+   "price": 88000,
+   "ageMonths": 21,
+   "listed": "2026-09-10",
+   "summary": "A self-hosted feature-flag service with four SDKs.",
+   "description": "A self-hosted feature-flag service with percentage rollouts, targeting rules and SDKs for TypeScript, Python, Go and Kotlin.",
+   "review": "Evidence reviewed",
+   "access": "Read-only repository review",
+   "route": "Repository and package ownership transfer",
+   "transferWindow": "10 days",
+   "includes": [
+    "Flag service source",
+    "Four SDKs",
+    "Admin console",
+    "Test suite"
+   ],
+   "works": [
+    "Percentage rollouts",
+    "Targeting by user attributes",
+    "Audit log of flag changes"
+   ],
+   "depends": [
+    "Package registry ownership moves separately per SDK"
+   ],
+   "excluded": [
+    "Hosted instances of current users"
+   ],
+   "metric": {
+    "value": "4",
+    "label": "language SDKs"
+   }
+  },
+  {
+   "id": "MX-082",
+   "slug": "inkwell",
+   "name": "Inkwell",
+   "type": "Headless Markdown CMS",
+   "category": "code",
+   "deal": "sell",
+   "status": "live",
+   "price": 72000,
+   "ageMonths": 17,
+   "listed": "2026-08-14",
+   "summary": "A Git-backed CMS with a clean editor for non-developers.",
+   "description": "A headless CMS that stores Markdown in Git, gives writers a clean editor and publishes through webhooks to any static site.",
+   "review": "Route documented",
+   "access": "Live editor demo",
+   "route": "Repository transfer",
+   "transferWindow": "7 days",
+   "includes": [
+    "Editor and API source",
+    "GitHub and GitLab adapters",
+    "Webhook publisher"
+   ],
+   "works": [
+    "Rich Markdown editor",
+    "Image handling to Git LFS",
+    "Scheduled publishing"
+   ],
+   "depends": [
+    "GitHub app registration is recreated by the buyer"
+   ],
+   "excluded": [
+    "Hosted customer workspaces"
+   ],
+   "metric": {
+    "value": "310",
+    "label": "GitHub stars"
+   }
+  },
+  {
+   "id": "MX-085",
+   "slug": "brightline",
+   "name": "Brightline",
+   "type": "Domain and identity",
+   "category": "domain",
+   "deal": "sell",
+   "status": "live",
+   "price": 96000,
+   "ageMonths": 62,
+   "listed": "2026-09-19",
+   "summary": "A two-word .co name with a finished fintech identity.",
+   "description": "A clean two-word .co domain with a complete fintech identity: wordmark, symbol, colour system and a sixteen-page brand book.",
+   "review": "Route documented",
+   "access": "Registrar proof after accepted enquiry",
+   "route": "Registrar transfer and brand files",
+   "transferWindow": "5–7 days",
+   "includes": [
+    ".co domain",
+    "Brand book",
+    "Symbol and wordmark masters",
+    "Colour and type system"
+   ],
+   "works": [
+    "Domain renewed for two more years",
+    "Editable brand masters"
+   ],
+   "depends": [
+    "Registrar transfer lock is lifted before completion"
+   ],
+   "excluded": [
+    "Trademark registration"
+   ],
+   "metric": {
+    "value": "16",
+    "label": "brand-book pages"
+   }
+  },
+  {
+   "id": "MX-088",
+   "slug": "tamarind",
+   "name": "Tamarind",
+   "type": "Domain and identity",
+   "category": "domain",
+   "deal": "sell",
+   "status": "live",
+   "price": 46000,
+   "ageMonths": 41,
+   "listed": "2026-07-18",
+   "summary": "A warm .in food-brand name with packaging-ready identity.",
+   "description": "A memorable .in name with an identity designed for a packaged-food brand: wordmark, label system and a pattern library.",
+   "review": "Route documented",
+   "access": "Registrar proof after accepted enquiry",
+   "route": "Registrar transfer and identity files",
+   "transferWindow": "5–7 days",
+   "includes": [
+    ".in domain",
+    "Wordmark masters",
+    "Label system",
+    "Pattern library"
+   ],
+   "works": [
+    "Print-ready label templates",
+    "Clean registrar history"
+   ],
+   "depends": [
+    "Registrar eligibility for .in is confirmed before transfer"
+   ],
+   "excluded": [
+    "Recipes or product formulations"
+   ],
+   "metric": {
+    "value": "3 yrs",
+    "label": "continuous ownership"
+   }
+  },
+  {
+   "id": "MX-091",
+   "slug": "mono-grid",
+   "name": "Mono Grid",
+   "type": "Editorial layout system",
+   "category": "design",
+   "deal": "rent",
+   "status": "live",
+   "price": 26000,
+   "priceUnit": "year",
+   "ageMonths": 13,
+   "listed": "2026-09-05",
+   "summary": "A twelve-column editorial system for long-form publishing.",
+   "description": "An editorial layout system for publishers: a twelve-column grid, type scale, 40 article modules and dark-mode tokens, licensed per publication.",
+   "review": "Evidence ready",
+   "access": "Read-only library review",
+   "route": "Non-exclusive yearly licence",
+   "transferWindow": "3 days",
+   "includes": [
+    "40 article modules",
+    "Type scale",
+    "Grid and spacing tokens",
+    "Figma library"
+   ],
+   "works": [
+    "Responsive article templates",
+    "Dark-mode token set"
+   ],
+   "depends": [
+    "Licensed fonts are purchased separately"
+   ],
+   "excluded": [
+    "Exclusive rights"
+   ],
+   "metric": {
+    "value": "40",
+    "label": "article modules"
+   }
+  },
+  {
+   "id": "MX-093",
+   "slug": "fieldnotes",
+   "name": "Fieldnotes",
+   "type": "Form component kit",
+   "category": "design",
+   "deal": "sell",
+   "status": "live",
+   "price": 38000,
+   "ageMonths": 10,
+   "listed": "2026-09-24",
+   "summary": "Accessible form components with validation patterns.",
+   "description": "A kit of 52 accessible form components with validation, error and empty states, built in Figma and React.",
+   "review": "Evidence ready",
+   "access": "Read-only library review",
+   "route": "Full assignment of design and code",
+   "transferWindow": "7 days",
+   "includes": [
+    "52 components",
+    "Validation patterns",
+    "React package",
+    "Figma library"
+   ],
+   "works": [
+    "Keyboard and screen-reader tested",
+    "Error and empty states"
+   ],
+   "depends": [
+    "None recorded"
+   ],
+   "excluded": [
+    "Future updates after transfer"
+   ],
+   "metric": {
+    "value": "52",
+    "label": "form components"
+   }
+  },
+  {
+   "id": "MX-095",
+   "slug": "ledger-docs",
+   "name": "Ledger Docs",
+   "type": "Documentation site template",
+   "category": "template",
+   "deal": "rent",
+   "status": "live",
+   "price": 12000,
+   "priceUnit": "year",
+   "ageMonths": 8,
+   "listed": "2026-09-16",
+   "summary": "A documentation template with search and versioning.",
+   "description": "A documentation site template with full-text search, version switching, API reference pages and a changelog, licensed per product.",
+   "review": "Evidence ready",
+   "access": "Live preview",
+   "route": "Non-exclusive yearly licence",
+   "transferWindow": "2 days",
+   "includes": [
+    "Docs template",
+    "API reference layout",
+    "Search setup guide"
+   ],
+   "works": [
+    "Version switcher",
+    "Full-text search",
+    "Dark mode"
+   ],
+   "depends": [
+    "Search index is hosted by the licensee"
+   ],
+   "excluded": [
+    "Content writing"
+   ],
+   "metric": {
+    "value": "14",
+    "label": "page layouts"
+   }
+  },
+  {
+   "id": "MX-097",
+   "slug": "shopfront",
+   "name": "Shopfront",
+   "type": "D2C store template",
+   "category": "template",
+   "deal": "sell",
+   "status": "live",
+   "price": 34000,
+   "ageMonths": 12,
+   "listed": "2026-08-28",
+   "summary": "A fast storefront template for single-brand D2C shops.",
+   "description": "A storefront template for single-brand D2C shops: product, collection, cart and editorial pages, tuned for fast mobile loads.",
+   "review": "Evidence ready",
+   "access": "Live preview",
+   "route": "Full assignment of the template",
+   "transferWindow": "5 days",
+   "includes": [
+    "11 page templates",
+    "Section library",
+    "Performance notes"
+   ],
+   "works": [
+    "Mobile-first product pages",
+    "Editorial lookbook sections"
+   ],
+   "depends": [
+    "Commerce backend is provided by the buyer"
+   ],
+   "excluded": [
+    "Product photography"
+   ],
+   "metric": {
+    "value": "11",
+    "label": "page templates"
+   }
+  },
+  {
+   "id": "MX-099",
+   "slug": "pantry-pal",
+   "name": "Pantry Pal",
+   "type": "Android grocery-list app",
+   "category": "provider",
+   "deal": "sell",
+   "status": "live",
+   "price": 68000,
+   "ageMonths": 23,
+   "listed": "2026-09-12",
+   "summary": "A Play Store grocery app moved through Google's app transfer.",
+   "description": "A shared grocery-list app on Google Play with household sync, moved through Google Play's own app-transfer process so ratings stay attached.",
+   "review": "Route documented",
+   "access": "Internal test build after accepted enquiry",
+   "route": "Google Play app transfer and repository",
+   "transferWindow": "7–14 days",
+   "includes": [
+    "Kotlin source",
+    "Play listing via app transfer",
+    "Design files"
+   ],
+   "works": [
+    "Household sharing",
+    "Offline lists",
+    "Barcode scan"
+   ],
+   "depends": [
+    "Google Play app-transfer eligibility for both accounts"
+   ],
+   "excluded": [
+    "User data",
+    "The seller's developer account"
+   ],
+   "metric": {
+    "value": "4.4",
+    "label": "Play Store rating"
+   }
+  },
+  {
+   "id": "MX-101",
+   "slug": "studio-calm",
+   "name": "Studio Calm",
+   "type": "Chrome focus extension",
+   "category": "provider",
+   "deal": "sell",
+   "status": "live",
+   "price": 42000,
+   "ageMonths": 31,
+   "listed": "2026-08-03",
+   "summary": "A focus-timer extension with 18,000 weekly users.",
+   "description": "A Chrome extension that blocks distracting sites during focus sessions, with a calm timer, streaks and a weekly report.",
+   "review": "Route documented",
+   "access": "Unlisted test version after accepted enquiry",
+   "route": "Chrome Web Store ownership transfer and repository",
+   "transferWindow": "7 days",
+   "includes": [
+    "Extension source",
+    "Store listing transfer",
+    "Brand assets"
+   ],
+   "works": [
+    "Site blocking during sessions",
+    "Streaks and weekly report"
+   ],
+   "depends": [
+    "Chrome Web Store publisher transfer rules apply"
+   ],
+   "excluded": [
+    "User data"
+   ],
+   "metric": {
+    "value": "18k",
+    "label": "weekly users"
+   }
+  },
+  {
+   "id": "MX-103",
+   "slug": "tabletop",
+   "name": "Tabletop",
+   "type": "Shopify restaurant app",
+   "category": "provider",
+   "deal": "rent",
+   "status": "rented",
+   "price": 11000,
+   "priceUnit": "month",
+   "ageMonths": 18,
+   "listed": "2026-07-09",
+   "summary": "Table reservations inside Shopify, currently licensed.",
+   "description": "A Shopify app that adds table reservations and pre-orders to restaurant storefronts. It is currently licensed and shown for reference.",
+   "review": "Licence active",
+   "access": "Closed record",
+   "route": "Monthly source licence",
+   "transferWindow": "3 days",
+   "includes": [
+    "App source",
+    "Setup guide"
+   ],
+   "works": [
+    "Reservation calendar",
+    "Pre-orders with deposits"
+   ],
+   "depends": [
+    "The licensee runs the app under their own Shopify Partner account"
+   ],
+   "excluded": [
+    "App Store listing",
+    "Merchant data"
+   ],
+   "metric": {
+    "value": "46",
+    "label": "installing restaurants"
+   }
+  }
+ ],
+ "testimonials": [
+  {
+   "quote": "We shut the company in March and the analytics product was the part I could not bear to archive. The review desk asked for the repository history and our Stripe export before anything else. That was the moment I trusted the process.",
+   "name": "Ananya R.",
+   "role": "Former founder, subscription analytics",
+   "city": "Bengaluru",
+   "track": "seller"
+  },
+  {
+   "quote": "I bought a support portal for a client instead of building one. The condition ledger listed two broken integrations up front, so the price made sense and nothing surprised us in week one.",
+   "name": "Karthik M.",
+   "role": "Agency owner",
+   "city": "Chennai",
+   "track": "buyer"
+  },
+  {
+   "quote": "The domain had been parked for three years. Listing it took one evening, and the desk sent back a single question about the registrar lock before it went live.",
+   "name": "Meera S.",
+   "role": "Product designer",
+   "city": "Pune",
+   "track": "seller"
+  },
+  {
+   "quote": "Licensing the design system per year suited us better than buying it. The record said exactly which components were in scope and which fonts we had to license ourselves.",
+   "name": "Rohan D.",
+   "role": "Head of design, fintech",
+   "city": "Mumbai",
+   "track": "buyer"
+  },
+  {
+   "quote": "Nobody saw my contact details until an enquiry was accepted. For a solo founder that matters more than any feature.",
+   "name": "Farah K.",
+   "role": "Indie developer",
+   "city": "Hyderabad",
+   "track": "seller"
+  },
+  {
+   "quote": "We compared three admin codebases on the index by condition, not by screenshots. The one we rented had the shortest dependency list, and the handover took nine days.",
+   "name": "Vikram P.",
+   "role": "CTO, logistics startup",
+   "city": "Gurugram",
+   "track": "buyer"
+  }
+ ],
+ "reviews": {
+  "relay": [
+   {
+    "rating": 5,
+    "title": "Tokens were clean on day one",
+    "body": "We mapped Relay's tokens onto our brand in an afternoon. Focus states and the disabled palette were already accessible, which saved a full audit cycle.",
+    "name": "Nikhil J.",
+    "role": "Design lead",
+    "date": "2026-08-14",
+    "verified": true
+   },
+   {
+    "rating": 4,
+    "title": "Solid, docs could be deeper",
+    "body": "Components are well built. The usage notes for the data table are thin, so we wrote our own guidance for the team.",
+    "name": "Priya V.",
+    "role": "Frontend engineer",
+    "date": "2026-07-02",
+    "verified": true
+   },
+   {
+    "rating": 5,
+    "title": "Renewed for a second year",
+    "body": "The licence terms were exactly as listed. Renewal was one email to the review desk.",
+    "name": "Sahil G.",
+    "role": "Founder",
+    "date": "2026-05-21",
+    "verified": true
+   }
+  ],
+  "paperplane": [
+   {
+    "rating": 4,
+    "title": "Fast launch page",
+    "body": "We shipped a waitlist page in two days. The hero variants are the strongest part; the pricing section needed rework for INR.",
+    "name": "Tanvi B.",
+    "role": "Growth marketer",
+    "date": "2026-08-29",
+    "verified": true
+   },
+   {
+    "rating": 3,
+    "title": "Good base, dated animations",
+    "body": "Layout and type are good. We removed most of the scroll effects because they slowed the page on older Android phones.",
+    "name": "Arjun K.",
+    "role": "Developer",
+    "date": "2026-06-11",
+    "verified": true
+   }
+  ],
+  "tessellate": [
+   {
+    "rating": 5,
+    "title": "Charts that look designed",
+    "body": "Every chart type came with light and dark variants and sensible defaults. The Figma file and the code matched, which is rare.",
+    "name": "Aditya L.",
+    "role": "Product designer",
+    "date": "2026-08-02",
+    "verified": true
+   },
+   {
+    "rating": 4,
+    "title": "Transfer was smooth",
+    "body": "Files arrived within the stated window. We had to replace one icon set that was licensed separately, as the exclusions said.",
+    "name": "Sneha P.",
+    "role": "Founder, BI startup",
+    "date": "2026-07-12",
+    "verified": true
+   },
+   {
+    "rating": 5,
+    "title": "Paid for itself",
+    "body": "We cancelled a charting library subscription after moving to Tessellate. Clean handover notes.",
+    "name": "Omkar W.",
+    "role": "CTO",
+    "date": "2026-06-18",
+    "verified": true
+   }
+  ],
+  "stackyard": [
+   {
+    "rating": 4,
+    "title": "Saved two months of admin work",
+    "body": "Role management and audit logs were production ready. The deployment scripts assumed an older Node version, which took a day to fix.",
+    "name": "Harsh V.",
+    "role": "Backend engineer",
+    "date": "2026-08-21",
+    "verified": true
+   },
+   {
+    "rating": 5,
+    "title": "Exactly what was described",
+    "body": "The condition ledger was accurate down to the failing test it mentioned. Handover call with the seller answered everything else.",
+    "name": "Kavya M.",
+    "role": "Tech lead",
+    "date": "2026-07-07",
+    "verified": true
+   }
+  ],
+  "tally-desk": [
+   {
+    "rating": 5,
+    "title": "GST invoices worked immediately",
+    "body": "The invoice templates already handled GST breakdowns. We onboarded twelve freelancers in the first month on the licence.",
+    "name": "Lakshmi N.",
+    "role": "Operations manager",
+    "date": "2026-09-03",
+    "verified": true
+   },
+   {
+    "rating": 4,
+    "title": "Reliable, small gaps",
+    "body": "Bank reconciliation is basic. Everything else matched the record, including the export formats.",
+    "name": "Deepak R.",
+    "role": "Chartered accountant",
+    "date": "2026-07-19",
+    "verified": true
+   }
+  ],
+  "mono-grid": [
+   {
+    "rating": 5,
+    "title": "The grid our editors wanted",
+    "body": "Long reads finally look intentional. The baseline grid held up across Hindi and English body text, which we did not expect.",
+    "name": "Ishita C.",
+    "role": "Editor, digital magazine",
+    "date": "2026-08-08",
+    "verified": true
+   },
+   {
+    "rating": 4,
+    "title": "Worth the yearly licence",
+    "body": "Excellent print-style layouts. You will need your own image cropping rules; the kit does not include them.",
+    "name": "Manav T.",
+    "role": "Art director",
+    "date": "2026-06-25",
+    "verified": true
+   }
+  ],
+  "ledger-docs": [
+   {
+    "rating": 4,
+    "title": "Search is the best feature",
+    "body": "Versioned docs with search out of the box. Setting up the API reference pages took longer than the record suggested.",
+    "name": "Rahul S.",
+    "role": "Developer advocate",
+    "date": "2026-09-10",
+    "verified": true
+   },
+   {
+    "rating": 5,
+    "title": "Moved our docs in a week",
+    "body": "The version switcher alone justified the licence. Support during the first thirty days was responsive.",
+    "name": "Neha A.",
+    "role": "Engineering manager",
+    "date": "2026-07-30",
+    "verified": true
+   }
+  ],
+  "tabletop": [
+   {
+    "rating": 4,
+    "title": "Restaurants liked it",
+    "body": "Menu sync with Shopify worked for our pilot outlets. Provider approval for the app transfer took eleven days, as the record warned.",
+    "name": "Siddharth G.",
+    "role": "Operator, F&B group",
+    "date": "2026-08-17",
+    "verified": true
+   },
+   {
+    "rating": 3,
+    "title": "Needs a table-map update",
+    "body": "Ordering and payments are fine. The table layout editor is dated and struggled with larger floors.",
+    "name": "Pooja I.",
+    "role": "Product manager",
+    "date": "2026-06-30",
+    "verified": true
+   }
+  ]
+ }
+}

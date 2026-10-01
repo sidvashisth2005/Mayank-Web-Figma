@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.vercel/
+.env*
+_positivus-original/
+*.log
+
+.env*

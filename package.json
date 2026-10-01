@@ -1,0 +1,14 @@
+{
+  "name": "mayank-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/dev.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.1",
+    "@vercel/blob": "^1.1.1"
+  }
+}

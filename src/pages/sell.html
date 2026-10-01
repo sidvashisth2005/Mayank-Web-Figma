@@ -1,0 +1,124 @@
+<!--page {"title": "List an asset", "description": "List a product, codebase, domain or design system on Mayank. Free to list, reviewed privately before it goes live.", "nav": "/sell", "bodyClass": "page-sell", "scripts": ["/js/sell.js"]} -->
+    <section class="page-hero container">
+      <p class="eyebrow eyebrow--plain" data-reveal>Sell or rent out</p>
+      <h1 class="page-title" data-reveal>Put the work back to <em>work.</em></h1>
+      <p class="page-lead" data-reveal>Six short steps. Your draft saves on this device as you go.</p>
+    </section>
+
+    <section class="container">
+      <div class="wizard" id="wizard">
+        <ol class="wizard__steps" aria-label="Listing steps">
+          <li class="is-on"><b>1</b><span>Asset</span></li>
+          <li><b>2</b><span>Terms</span></li>
+          <li><b>3</b><span>Condition</span></li>
+          <li><b>4</b><span>Images</span></li>
+          <li><b>5</b><span>Contact</span></li>
+          <li><b>6</b><span>Review</span></li>
+        </ol>
+
+        <form class="form wizard__form" id="listingForm" novalidate>
+          <fieldset class="wizard__panel" data-step="0">
+            <legend>What are you listing?</legend>
+            <label class="field">Asset name*<input type="text" name="name" required minlength="2" maxlength="80" placeholder="e.g. Kite" /></label>
+            <label class="field">Category*
+              <select name="category" required>
+                <option value="">Choose one</option>
+                <option>Complete product</option>
+                <option>Code or technical asset</option>
+                <option>Template or design system</option>
+                <option>Domain and identity</option>
+                <option>Social media page</option>
+                <option>Ad account</option>
+                <option>Cloud credits or subscription</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <p class="field-note" id="providerNote" hidden>Provider-dependent assets are accepted only when the provider permits a documented transfer.</p>
+            <label class="field">Description*<textarea name="description" rows="5" required minlength="40" maxlength="1200" placeholder="What it is, where it stands today and why it has value."></textarea></label>
+          </fieldset>
+
+          <fieldset class="wizard__panel" data-step="1" hidden>
+            <legend>Terms</legend>
+            <div class="field">
+              <span>Deal*</span>
+              <div class="options">
+                <label><input type="radio" name="dealType" value="Sell" checked /><span>Sell</span></label>
+                <label><input type="radio" name="dealType" value="Rent or license" /><span>Rent or licence</span></label>
+              </div>
+            </div>
+            <div class="form__row">
+              <label class="field">Price in INR*<input type="number" name="price" required min="1000" max="1000000000" step="1" inputmode="numeric" placeholder="e.g. 150000" /></label>
+              <label class="field" id="rentPeriodField" hidden>Per*
+                <select name="rentPeriod"><option value="">Choose</option><option value="month">Month</option><option value="year">Year</option></select>
+              </label>
+            </div>
+            <label class="field">Age*<input type="text" name="age" required maxlength="40" placeholder="e.g. 18 months" /></label>
+          </fieldset>
+
+          <fieldset class="wizard__panel" data-step="2" hidden>
+            <legend>Condition</legend>
+            <label class="field">What works today?*<textarea name="condition" rows="4" required minlength="20" maxlength="1500" placeholder="Working features, and anything that needs attention."></textarea></label>
+            <label class="field">Key numbers<textarea name="metrics" rows="2" maxlength="800" placeholder="Users, revenue, traffic, test coverage…"></textarea></label>
+            <label class="field">Transfer readiness*
+              <select name="transfer" required>
+                <option value="">Choose one</option>
+                <option>I own the asset and can transfer it</option>
+                <option>I own it but need transfer guidance</option>
+                <option>Transfer depends on provider approval</option>
+              </select>
+            </label>
+            <label class="field">Dependencies<textarea name="dependencies" rows="2" maxlength="800" placeholder="Hosting, third-party accounts, licences…"></textarea></label>
+          </fieldset>
+
+          <fieldset class="wizard__panel" data-step="3" hidden>
+            <legend>Images</legend>
+            <label class="drop" id="drop">
+              <input type="file" id="imageInput" accept="image/jpeg,image/png,image/webp" multiple />
+              <strong>Add up to 4 screenshots</strong>
+              <span>JPG, PNG or WebP. Resized automatically.</span>
+            </label>
+            <ul class="previews" id="previews"></ul>
+            <label class="field">Demo video link<input type="url" name="videoUrl" maxlength="300" placeholder="https://" /></label>
+          </fieldset>
+
+          <fieldset class="wizard__panel" data-step="4" hidden>
+            <legend>How should the desk reach you?</legend>
+            <label class="field">First name*<input type="text" name="seller" required maxlength="60" autocomplete="given-name" /></label>
+            <div class="field">
+              <span>Preferred contact*</span>
+              <div class="options">
+                <label><input type="radio" name="contactMethod" value="Email" checked /><span>Email</span></label>
+                <label><input type="radio" name="contactMethod" value="WhatsApp" /><span>WhatsApp</span></label>
+              </div>
+            </div>
+            <div class="form__row">
+              <label class="field">Email*<input type="email" name="email" required maxlength="160" autocomplete="email" /></label>
+              <label class="field" id="whatsappField" hidden>WhatsApp*<input type="tel" name="whatsapp" maxlength="20" placeholder="+91" autocomplete="tel" /></label>
+            </div>
+            <label class="field">LinkedIn<input type="url" name="linkedin" maxlength="300" placeholder="https://linkedin.com/in/…" /></label>
+          </fieldset>
+
+          <fieldset class="wizard__panel" data-step="5" hidden>
+            <legend>Review and submit</legend>
+            <dl class="summary" id="summary"></dl>
+            <label class="check"><input type="checkbox" name="eligibility" required /><span>I have the right to offer this asset, and it contains no customer data or personal credentials.</span></label>
+            <p class="field-note">Read the <a href="/restricted-assets">listing rules</a>. Nothing is published until the desk approves it.</p>
+          </fieldset>
+
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <p class="form-status" role="status"></p>
+          <div class="wizard__nav">
+            <button type="button" class="btn btn--outline" id="back" hidden>Back</button>
+            <button type="button" class="btn btn--dark" id="nextStep">Continue</button>
+            <button type="submit" class="btn btn--dark" id="submitListing" hidden>Submit for review</button>
+          </div>
+        </form>
+
+        <div class="wizard__done" id="done" hidden>
+          <span class="done-mark" aria-hidden="true">✓</span>
+          <h2>Submitted for review.</h2>
+          <p>Reference <b id="doneRef"></b>. The desk will reach you by your chosen contact method.</p>
+          <a href="/market" class="btn btn--dark">Browse the market</a>
+        </div>
+      </div>
+    </section>

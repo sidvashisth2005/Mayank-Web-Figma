@@ -1,0 +1,91 @@
+    <article class="container record-page" style="--ink: {{ink}}">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/market">Market</a><span aria-hidden="true">/</span><a href="/market?category={{categoryKey}}">{{category}}</a><span aria-hidden="true">/</span><span aria-current="page">{{name}}</span></nav>
+
+      <header class="record-hero">
+        <div>
+          <p class="rec__id">{{id}} · {{type}}</p>
+          <h1 class="page-title">{{name}}</h1>
+          <p class="record-hero__lead">{{summary}}</p>
+        </div>
+        <div class="record-hero__badges"><span class="pill pill--green">{{deal}}</span><span class="pill status--{{statusKey}}">{{status}}</span></div>
+      </header>
+
+      <div class="record-layout">
+        <div class="record-main">
+          <figure class="gallery">
+            <div class="gallery__main"><img id="shotMain" src="/assets/records/{{slug}}/1.jpg" alt="Screen from {{name}}" width="1600" height="1000" fetchpriority="high" /></div>
+            <div class="gallery__thumbs">{{shots}}</div>
+          </figure>
+
+          <section class="record-section">
+            <h2 class="record-section__title">About</h2>
+            <p class="record-desc">{{description}}</p>
+          </section>
+
+          <section class="record-section">
+            <h2 class="record-section__title">Condition ledger</h2>
+            <div class="ledger">
+              <section><h3>Included</h3>{{includes}}</section>
+              <section><h3>Works today</h3>{{works}}</section>
+              <section><h3>Depends on</h3>{{depends}}</section>
+              <section><h3>Not included</h3>{{excluded}}</section>
+            </div>
+          </section>
+
+          {{reviews}}
+        </div>
+
+        <aside class="record-side">
+          <dl class="facts">
+            <div class="facts__price"><dt>{{priceLabel}}</dt><dd>{{price}}</dd></div>
+            <div><dt>Key figure</dt><dd>{{metricValue}} {{metricLabel}}</dd></div>
+            <div><dt>Review</dt><dd>{{review}}</dd></div>
+            <div><dt>Age</dt><dd>{{age}}</dd></div>
+            <div><dt>Access</dt><dd>{{access}}</dd></div>
+            <div><dt>Route</dt><dd>{{route}}</dd></div>
+            <div><dt>Transfer</dt><dd>{{window}}</dd></div>
+          </dl>
+          <a href="#enquire" class="btn btn--dark btn--block" {{enquiry}}>Enquire privately</a>
+          <p class="record-side__note" {{closedNote}}>This record is closed and shown for reference.</p>
+        </aside>
+      </div>
+
+      <section class="record-section enquire" id="enquire" {{enquiry}}>
+        <div class="enquire__intro">
+          <h2>Enquire about <em>{{name}}</em></h2>
+          <p>Your note reaches the review desk first. No payment, no obligation.</p>
+        </div>
+        <form class="form" id="enquiryForm" data-asset="{{slug}}" novalidate>
+          <div class="form__row">
+            <label class="field">Name*<input type="text" name="name" autocomplete="name" required maxlength="80" /></label>
+            <label class="field">Email*<input type="email" name="email" autocomplete="email" required maxlength="160" /></label>
+          </div>
+          <div class="form__row">
+            <label class="field">Company<input type="text" name="company" autocomplete="organization" maxlength="120" /></label>
+            <label class="field">Budget<input type="text" name="budget" placeholder="e.g. ₹1–2 lakh" maxlength="40" /></label>
+          </div>
+          <fieldset class="field">
+            <legend>I want to*</legend>
+            <div class="options">
+              <label><input type="radio" name="intent" value="Buy outright" checked /><span>Buy</span></label>
+              <label><input type="radio" name="intent" value="Rent or licence" /><span>Rent</span></label>
+              <label><input type="radio" name="intent" value="Ask a question" /><span>Ask a question</span></label>
+            </div>
+          </fieldset>
+          <label class="field">Message*<textarea name="message" rows="5" required minlength="20" maxlength="2000" placeholder="What would you do with it?"></textarea></label>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn btn--dark">Send enquiry</button>
+          <p class="form-status" role="status"></p>
+        </form>
+      </section>
+
+      <nav class="record-pager" aria-label="More records">
+        <a href="/market/{{prevSlug}}"><small>Previous</small>{{prevName}}</a>
+        <a href="/market/{{nextSlug}}"><small>Next</small>{{nextName}}</a>
+      </nav>
+
+      <section class="section">
+        <div class="section__head section__head--split"><h2 class="tag">Similar records</h2><a href="/market" class="link-arrow">Back to market <i class="arrow-up arrow-up--dark"></i></a></div>
+        <div class="records">{{similar}}</div>
+      </section>
+    </article>

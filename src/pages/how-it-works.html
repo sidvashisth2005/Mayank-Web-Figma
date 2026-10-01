@@ -1,0 +1,91 @@
+<!--page {"title": "How it works", "description": "How Mayank reviews, presents and transfers startup-built digital assets, for buyers and for sellers.", "nav": "/how-it-works", "bodyClass": "page-method"} -->
+    <section class="page-hero container">
+      <p class="eyebrow eyebrow--plain" data-reveal>How it works</p>
+      <h1 class="page-title" data-reveal>Clarity before access. <em>Agreement before transfer.</em></h1>
+    </section>
+
+    <section class="container">
+      <div class="route" data-reveal>
+        <ol class="route__list" id="route">
+          <li><b>01</b><strong>Listed</strong><span>The seller describes what exists.</span></li>
+          <li><b>02</b><strong>Reviewed</strong><span>Identity, rights, condition, route.</span></li>
+          <li><b>03</b><strong>Published</strong><span>The record enters the index.</span></li>
+          <li><b>04</b><strong>Enquired</strong><span>A buyer writes privately.</span></li>
+          <li><b>05</b><strong>Transferred</strong><span>The asset moves by its route.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="tracks" data-reveal>
+        <div class="tracks__head">
+          <h2>Choose your side.</h2>
+          <div class="segmented" role="tablist" aria-label="Choose a track">
+            <button type="button" role="tab" aria-selected="true" aria-controls="trackPanel" data-track="buyer">I’m buying</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="trackPanel" data-track="seller">I’m selling</button>
+          </div>
+        </div>
+        <ol class="tracks__steps" id="trackPanel" role="tabpanel"></ol>
+        <a href="/market" class="link-arrow" id="trackCta">Browse the market <i class="arrow-up arrow-up--dark"></i></a>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section__head" data-reveal>
+        <h2 class="tag">Four checks</h2>
+        <p>What the desk confirms before a record goes live.</p>
+      </div>
+      <div class="accordion" id="accordion">
+        <details class="step" open data-reveal>
+          <summary><span class="step__num">01</span><span class="step__title">Identity</span><i class="toggle"></i></summary>
+          <p>The seller is checked privately. Their contact details stay protected until an enquiry is accepted.</p>
+        </details>
+        <details class="step" data-reveal>
+          <summary><span class="step__num">02</span><span class="step__title">Ownership</span><i class="toggle"></i></summary>
+          <p>Repository history, registrar records or original files support the claim.</p>
+        </details>
+        <details class="step" data-reveal>
+          <summary><span class="step__num">03</span><span class="step__title">Condition</span><i class="toggle"></i></summary>
+          <p>What works, what depends on a provider and what is missing stay visible to the buyer.</p>
+        </details>
+        <details class="step" data-reveal>
+          <summary><span class="step__num">04</span><span class="step__title">Route</span><i class="toggle"></i></summary>
+          <p>Every record states how it transfers, how long it takes and the support window.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section container" id="faq">
+      <div class="section__head" data-reveal>
+        <h2 class="tag">Questions</h2>
+      </div>
+      <div class="faq">
+        <details data-reveal><summary>Is Mayank the seller?<i class="toggle toggle--sm"></i></summary><p>No. Mayank curates records and introduces owners to buyers. Unless a record says otherwise, Mayank is not the buyer, seller, escrow provider or legal adviser.</p></details>
+        <details data-reveal><summary>Does review guarantee an asset?<i class="toggle toggle--sm"></i></summary><p>Review improves clarity but is not a guarantee of ownership, value or transferability. Each party does its own diligence.</p></details>
+        <details data-reveal><summary>Can I list social pages or ad accounts?<i class="toggle toggle--sm"></i></summary><p>Only when the provider permits a documented transfer. Any uncertainty is stated on the record.</p></details>
+        <details data-reveal><summary>Who sees my contact details?<i class="toggle toggle--sm"></i></summary><p>Only the review desk. They are shared only after an enquiry is accepted.</p></details>
+        <details data-reveal><summary>Are the current listings real?<i class="toggle toggle--sm"></i></summary><p>Not yet. Edition 01 records are samples. Enquiries and listings you submit do reach the review desk.</p></details>
+        <details data-reveal><summary>What happens after I list?<i class="toggle toggle--sm"></i></summary><p>It enters private review. Nothing is published automatically, and the desk contacts you if anything needs clarifying.</p></details>
+      </div>
+    </section>
+
+    <section class="section container" id="contact">
+      <div class="contact" data-reveal>
+        <div class="contact__intro">
+          <h2>Ask the desk.</h2>
+          <p>A question that isn’t about a specific record? Write here.</p>
+        </div>
+        <form class="form" id="enquiryForm" data-asset="general" novalidate>
+          <div class="form__row">
+            <label class="field">Name*<input type="text" name="name" autocomplete="name" required maxlength="80" /></label>
+            <label class="field">Email*<input type="email" name="email" autocomplete="email" required maxlength="160" /></label>
+          </div>
+          <input type="hidden" name="intent" value="Ask a question" />
+          <label class="field">Message*<textarea name="message" rows="5" required minlength="20" maxlength="2000"></textarea></label>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn btn--dark">Send</button>
+          <p class="form-status" role="status"></p>
+        </form>
+        <img class="contact__art" src="/assets/img/contact.svg" width="460" height="560" alt="" loading="lazy" />
+      </div>
+    </section>

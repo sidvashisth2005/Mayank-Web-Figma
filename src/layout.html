@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}} · Mayank</title>
+  <meta name="description" content="{{description}}" />
+  <meta name="theme-color" content="#191A23" />
+  <link rel="canonical" href="{{canonical}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mayank" />
+  <meta property="og:title" content="{{title}} · Mayank" />
+  <meta property="og:description" content="{{description}}" />
+  <meta property="og:url" content="{{canonical}}" />
+  <meta property="og:image" content="{{siteUrl}}/assets/img/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/assets/img/logo-m.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script>document.documentElement.classList.add("js");try{if((sessionStorage.getItem("mayank-intro")&&!/[?&]intro/.test(location.search))||matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("no-intro")}catch(e){document.documentElement.classList.add("no-intro")}</script>
+</head>
+<body class="{{bodyClass}}">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="loader" id="loader" role="presentation">
+    <div class="loader__grid" aria-hidden="true"></div>
+    <div class="loader__bar" aria-hidden="true"><span><img src="/assets/img/logo-m-light.svg" width="22" height="22" alt="" />Mayank / Edition 01</span><span id="ldStatus">Reviewing the record</span><b id="ldPct">000</b></div>
+    <div class="loader__stage" id="ldStage" aria-hidden="true">
+      <article class="ld-card" id="ldCard">
+        <header><span>Record MX-001</span><span class="ld-card__live">Useful work</span></header>
+        <ul>
+          <li><i></i>Identity checked</li>
+          <li><i></i>Ownership traced</li>
+          <li><i></i>Condition recorded</li>
+          <li><i></i>Route documented</li>
+        </ul>
+        <div class="ld-card__meter"><i id="ldMeter"></i></div>
+        <b class="ld-stamp" id="ldStamp">Reviewed</b>
+      </article>
+      <div class="ld-tiles" id="ldTiles">
+        <span class="ld-tile"><i class="ld-back"><small>01</small>Products</i><i class="ld-front">M</i></span>
+        <span class="ld-tile"><i class="ld-back"><small>02</small>Code</i><i class="ld-front">A</i></span>
+        <span class="ld-tile"><i class="ld-back"><small>03</small>Domains</i><i class="ld-front">Y</i></span>
+        <span class="ld-tile"><i class="ld-back"><small>04</small>Design</i><i class="ld-front">A</i></span>
+        <span class="ld-tile"><i class="ld-back"><small>05</small>Templates</i><i class="ld-front">N</i></span>
+        <span class="ld-tile"><i class="ld-back"><small>06</small>Provider</i><i class="ld-front">K</i></span>
+      </div>
+      <p class="ld-tagline" id="ldTagline"><span>Buy what’s built.</span> <em>Sell what’s useful.</em></p>
+    </div>
+    <button type="button" class="ld-skip" id="ldSkip">Skip intro <span aria-hidden="true">→</span></button>
+    <div class="loader__wipe" id="ldWipe" aria-hidden="true"></div>
+  </div>
+
+  <div class="shutter" id="shutter" aria-hidden="true"><img src="/assets/img/logo-m.svg" width="44" height="44" alt="" /></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="/" class="logo" aria-label="Mayank home">
+        <img src="/assets/img/logo-m.svg" width="36" height="36" alt="" />
+        <span>Mayank</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Main">
+        {{nav}}
+        <a href="/sell" class="btn btn--outline">List an asset</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+{{content}}
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer">
+      <div class="footer__top">
+        <a href="/" class="logo logo--light"><img src="/assets/img/logo-m-light.svg" width="36" height="36" alt="" /><span>Mayank</span></a>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="/market">Market</a><a href="/sell">Sell</a><a href="/how-it-works">How it works</a><a href="/restricted-assets">Listing rules</a>
+        </nav>
+      </div>
+      <div class="closing">
+        <p class="closing__kicker">The useful part can continue.</p>
+        <div class="closing__word" aria-hidden="true"><span>M</span><span>A</span><span>Y</span><span>A</span><span>N</span><span>K</span></div>
+      </div>
+      <div class="footer__mid">
+        <p class="footer__note">New records, once a week.<br />No noise.</p>
+        <form class="subscribe" id="subscribe" novalidate>
+          <input type="email" name="email" placeholder="Email" aria-label="Email for new records" autocomplete="email" required />
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn btn--green">Get new records</button>
+          <p class="subscribe__status" role="status"></p>
+        </form>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Mayank · Edition 01</p>
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/catalogue.js" defer></script>
+  {{scripts}}
+</body>
+</html>

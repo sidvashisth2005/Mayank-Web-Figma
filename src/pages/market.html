@@ -1,0 +1,44 @@
+<!--page {"title": "Market", "description": "Every reviewed record on Mayank: price, condition and transfer route up front.", "nav": "/market", "bodyClass": "page-market", "scripts": ["/js/market.js"]} -->
+    <section class="page-hero container">
+      <p class="eyebrow eyebrow--plain" data-reveal>The index</p>
+      <h1 class="page-title" data-reveal>Inspect the work. <em>Then decide.</em></h1>
+      <div data-reveal><!-- @stats --></div>
+    </section>
+
+    <section class="container market">
+      <div class="market__bar">
+        <div class="chips" role="group" aria-label="Deal type">
+          <button type="button" class="chip is-on" data-deal="all">All</button>
+          <button type="button" class="chip" data-deal="sell">Buy</button>
+          <button type="button" class="chip" data-deal="rent">Rent</button>
+          <button type="button" class="chip" data-deal="closed">Closed</button>
+        </div>
+        <div class="market__tools">
+          <label class="search">
+            <span class="sr-only">Search records</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="M15.5 15.5 21 21" /></svg>
+            <input type="search" id="search" placeholder="Search" autocomplete="off" />
+          </label>
+          <label class="select">
+            <span class="sr-only">Sort records</span>
+            <select id="sort">
+              <option value="new">Newest</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="chips chips--cats" role="group" aria-label="Category">
+        <!-- @category:chips -->
+      </div>
+      <p class="market__meta" id="marketMeta" aria-live="polite"></p>
+      <div class="records" id="records">
+        <!-- @records:all -->
+      </div>
+      <div class="records__empty" id="empty" hidden>
+        <p>Nothing matches yet.</p>
+        <button type="button" class="btn btn--outline" data-reset>Clear filters</button>
+      </div>
+      <p class="market__note">Edition 01 records are samples that show how assets are presented before launch.</p>
+    </section>

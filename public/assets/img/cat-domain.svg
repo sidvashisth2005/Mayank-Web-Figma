@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="170" viewBox="0 0 210 170" fill="none" stroke="#191A23" stroke-width="2">
+  <circle cx="92" cy="80" r="60" fill="#fff"/>
+  <ellipse cx="92" cy="80" rx="26" ry="60"/><path d="M32 80h120M40 50h104M40 110h104"/>
+  <rect x="104" y="108" width="92" height="40" rx="20" fill="#B9FF66"/>
+  <text x="150" y="134" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="500" fill="#191A23" stroke="none">.com</text>
+  <circle cx="170" cy="30" r="14" fill="#191A23"/><path d="M164 30 l4 4 8-8" stroke="#B9FF66" stroke-width="3"/>
+</svg>
