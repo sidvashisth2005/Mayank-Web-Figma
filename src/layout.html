@@ -19,7 +19,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
-  <script>document.documentElement.classList.add("js");try{if((sessionStorage.getItem("mayank-intro")&&!/[?&]intro/.test(location.search))||matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("no-intro")}catch(e){document.documentElement.classList.add("no-intro")}</script>
+  <script>
+    // The intro plays on every full load or refresh, on any page, from the top.
+    // It is skipped for clicks inside the site (the page transition plays instead),
+    // for back/forward, and for reduced motion.
+    (function () {
+      var d = document.documentElement, skip = false;
+      d.classList.add("js");
+      try {
+        var nav = performance.getEntriesByType("navigation")[0];
+        skip = !!sessionStorage.getItem("mayank-shutter") || (nav && nav.type === "back_forward") || matchMedia("(prefers-reduced-motion: reduce)").matches;
+      } catch (e) { skip = true; }
+      if (skip) { d.classList.add("no-intro"); return; }
+      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+      if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+      scrollTo(0, 0);
+    })();
+  </script>
 </head>
 <body class="{{bodyClass}}">
   <a class="skip" href="#main">Skip to content</a>

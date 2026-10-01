@@ -77,7 +77,7 @@
   }
 
   function runIntro() {
-    try { sessionStorage.setItem("mayank-intro", "1"); } catch (e) {}
+    scrollTo(0, 0);
     root.classList.add("is-loading");
     const byId = (id) => document.getElementById(id);
     const card = byId("ldCard"), stamp = byId("ldStamp"), stage = byId("ldStage"), meter = byId("ldMeter");
